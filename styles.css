@@ -1,0 +1,216 @@
+
+@font-face {
+    font-family: YoungSerif;
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+    font-display: swap;
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: hsl(30, 54%, 90%);
+    font-size: 16px;
+    
+}
+
+
+
+.container .card{
+    max-width: 45em; /* esto ayudó a centrar correctamente*/
+    margin: 6rem 0;  /*este margin también */
+    background-color:  hsl(0, 0%, 100%);
+    padding: 2.2em;
+    border-radius: 20px;
+}
+
+
+
+.card img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* contenido interno  */
+
+ h1,  h2 {
+    font-family: YoungSerif;
+    font-weight: 100;
+
+}
+
+h1{
+   margin: 18px 0 18px 0;
+}
+
+.text p, .preparation ul li, .ingredients ul li, .instructions ol li, .nutrition p, .nutrition table, h3{
+   color:  hsl(30, 10%, 34%);
+   font-family: Outfit;
+}
+
+.preparation h3{
+    color: hsl(332, 51%, 32%);
+}
+
+.preparation{
+    background-color:  hsl(330, 100%, 98%);
+    line-height: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0 30px 0;
+}
+
+ ul, ol{
+    list-style-position: inside; /*esto arregla el problema de los puntos saliendose del contenedor*/
+
+}
+
+ul li::marker{ /* pseudo clase que ayuda a cambair el color solo de las viñetas*/
+    color: hsl(14, 45%, 36%);
+    
+}
+
+
+
+
+ ol li::marker{ /* pseudo clase que ayuda a cambair el color solo de las viñetas*/
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+h2{
+
+    color: hsl(14, 45%, 36%);
+}
+
+.ingredients{
+    margin-bottom: 25px;
+    line-height: 30px;
+}
+
+.instructions{
+    margin: 25px 0 25px 0;
+    line-height: 30px;
+    
+}
+
+.nutrition{
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+
+
+.attribution a{
+    text-decoration: none ;
+    color: rgb(0, 0, 0);
+   
+}
+.attribution{
+    text-align: center;
+
+}
+
+table {
+    width: 100%;
+
+     /* Elimina los espacios entre celdas */
+}
+
+td{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+td:nth-child(2){
+    color:  hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+
+hr {
+    height: 1px;
+    border: none; 
+    background-color: hsl(30, 18%, 87%) ;
+  
+}
+
+
+ @media screen and (max-width: 375px) {
+   body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* overflow: hidden; */
+    margin: 0;
+    background-color: white;
+   }
+
+   .container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+   }
+
+   .container .card{
+    width: 100%;
+    height: 100%;
+    max-width: 375px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+   }
+
+   .card img{
+    width:100%;
+    height: auto;
+    border-radius: 0;
+   }
+
+   h1, h2 {
+    text-align: center;
+    margin-top: 1rem;
+   }
+
+    .preparation, .ingredients, .instructions {     
+    margin: 1rem 0;
+   }
+
+   .text{
+    padding: 1rem;
+   }
+
+  .attribution{
+    display: none;
+  }
+
+
+}
+
+
+
